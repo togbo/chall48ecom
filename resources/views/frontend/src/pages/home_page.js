@@ -24,9 +24,10 @@ export default function Home() {
                     referrerpolicy="no-referrer"
                 />
             </Head>
-            <Layout>
-                <main className={styles.main}></main>
-            </Layout>
         </>
     );
 }
+
+Home.getLayout = function getLayout(page) {
+    return <Layout>{page}</Layout>;
+};
