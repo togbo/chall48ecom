@@ -19,7 +19,7 @@ export default function Layout({ children }) {
 
     const [name, setName] = useState("test");
     // const [shopCardArray, setShopCardArray] = useState([name]);
-    const shopCardArray = ["name"];
+    const shopCardArray = ["name", "name2", "name3"];
 
     // const addShopCard = async () => {
     //     setShopCardArray([...shopCardArray, name]);
@@ -35,9 +35,8 @@ export default function Layout({ children }) {
             <div>
                 <header className={styles.header}>
                     <div
-                        className={`${styles.burger} ${
-                            burgerActive ? styles.active : ""
-                        }`}
+                        className={`${styles.burger} ${burgerActive ? styles.active : ""
+                            }`}
                         onClick={handleBurgerClick}
                     >
                         <span />
@@ -70,13 +69,15 @@ export default function Layout({ children }) {
                             Product{" "}
                         </button>
                         <div className={styles.popupShop}>
-                            {shopCardArray.map((item) => {
-                                {
-                                    return isShown ? (
-                                        <ShopCard name={item} />
-                                    ) : null;
-                                }
-                            })}
+                            <div className={styles.allProduct}>
+                                {shopCardArray.map((item) => {
+                                    {
+                                        return isShown ? (
+                                            <ShopCard name={item} />
+                                        ) : null;
+                                    }
+                                })}
+                            </div>
                         </div>
                     </div>
                 </header>

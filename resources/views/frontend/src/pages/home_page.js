@@ -24,9 +24,9 @@ export default function Home() {
                     referrerpolicy="no-referrer"
                 />
             </Head>
-            <Layout>
-                <main className={styles.main}></main>
-            </Layout>
+            <main className={styles.main}>
+                <h1 className={styles.title}>Welcome to the home page</h1> 
+            </main>
         </>
     );
 }
