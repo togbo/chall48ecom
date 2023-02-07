@@ -35,6 +35,9 @@ L'avantage de ce modèle décentralisé est la résilience et la flexibilité. S
 
 Pour résumer, notre projet vise à construire un réseau de petits commerçants décentralisé qui permet aux clients finaux d'acheter des produits proposés par différents commerçants via un seul site web.
 
+Pour mettre en place ce concept de decentralisation nous avons pensé a utiliser la technologie blockchain, comme la blockchain Ethereum, qui permet de stocker des données de manière distribuée et décentralisée. En utilisant la blockchain Ethereum, on peut développer une plateforme e-commerce décentralisée qui permet de stocker les transactions et les informations du site de manière transparente, sécurisée et permanente. Les utilisateurs peuvent interagir directement avec la plateforme via des contrats intelligents, sans l'intervention d'un tiers de confiance. Cela offre plus de liberté et d'autonomie aux utilisateurs, ainsi qu'une réduction des coûts et une meilleure efficacité pour les entreprises
+
+
 ## Stockage de données
 Pour stocker les informations sur les produits et les instances connues, nous pouvons utiliser une base de données, telle que MySQL. Cependant, pour garantir la sécurité des données, nous devons également prendre en compte les menaces potentielles telles que les fuites de données et les violations de sécurité.
 
