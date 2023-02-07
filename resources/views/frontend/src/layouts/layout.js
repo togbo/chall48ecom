@@ -25,72 +25,65 @@ export default function Layout({ children }) {
     //     setShopCardArray([...shopCardArray, name]);
     // };
 
-    if (
-        children.type.name === "Connexion" ||
-        children.type.name === "createAccount"
-    ) {
-        return <div>{children}</div>;
-    } else {
-        return (
-            <div>
-                <header className={styles.header}>
-                    <div
-                        className={`${styles.burger} ${
-                            burgerActive ? styles.active : ""
-                        }`}
-                        onClick={handleBurgerClick}
+    return (
+        <div>
+            <header className={styles.header}>
+                <div
+                    className={`${styles.burger} ${
+                        burgerActive ? styles.active : ""
+                    }`}
+                    onClick={handleBurgerClick}
+                >
+                    <span />
+                </div>
+                {showPopup && (
+                    <div className={styles.popupdiv}>
+                        <a href="#">Profil</a>
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
+                    </div>
+                )}
+
+                <input
+                    type="search"
+                    placeholder="Search"
+                    className={styles.search}
+                />
+
+                <div className={styles.Logo}>
+                    <h1>Logo</h1>
+                </div>
+
+                <div className={styles.shop}>
+                    <button
+                        className={styles.shopbtn}
+                        onClick={handleShopClick}
                     >
-                        <span />
+                        {" "}
+                        Product{" "}
+                    </button>
+                    <div className={styles.popupShop}>
+                        {shopCardArray.map((item) => {
+                            {
+                                return isShown ? (
+                                    <ShopCard name={item} />
+                                ) : null;
+                            }
+                        })}
                     </div>
-                    {showPopup && (
-                        <div className={styles.popupdiv}>
-                            <a href="#">Profil</a>
-                            <a href="#">Home</a>
-                            <a href="#">About</a>
-                            <a href="#">Contact</a>
-                        </div>
-                    )}
-
-                    <input
-                        type="search"
-                        placeholder="Search"
-                        className={styles.search}
-                    />
-
-                    <div className={styles.Logo}>
-                        <h1>Logo</h1>
-                    </div>
-
-                    <div className={styles.shop}>
-                        <button
-                            className={styles.shopbtn}
-                            onClick={handleShopClick}
-                        >
-                            {" "}
-                            Product{" "}
-                        </button>
-                        <div className={styles.popupShop}>
-                            {shopCardArray.map((item) => {
-                                {
-                                    return isShown ? (
-                                        <ShopCard name={item} />
-                                    ) : null;
-                                }
-                            })}
-                        </div>
-                    </div>
-                </header>
-                <main>{children}</main>
-                <footer className={styles.footer}>
-                    <div className={styles.footerContent}>
-                        <p>Instance : numero instance</p>
-                        <span>
-                            <h2>Logo</h2>
-                        </span>
-                        <h2>Nom commercant</h2>
-                    </div>
-                </footer>
-            </div>
-        );
-    }
+                </div>
+            </header>
+            <main>{children}</main>
+            <footer className={styles.footer}>
+                <div className={styles.footerContent}>
+                    <p>Instance : numero instance</p>
+                    <span>
+                        <h2>Logo</h2>
+                    </span>
+                    <h2>Nom commercant</h2>
+                </div>
+            </footer>
+        </div>
+    );
 }
