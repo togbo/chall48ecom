@@ -7,7 +7,7 @@ import style from "@/styles/connexion.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Connexion() {
     if (process.browser) {
         test();
     }

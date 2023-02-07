@@ -9,12 +9,12 @@ import style from "@/styles/cdc.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function createAccount() {
     if (process.browser) {
-        test();
+        RefreshVar();
     }
 
-    function test() {
+    function RefreshVar() {
         let page1 = document.getElementById("page1");
     let page2 = document.getElementById("page2");
     let page3 = document.getElementById("page3");
