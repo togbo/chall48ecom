@@ -12,6 +12,23 @@
   background-color: aliceblue;
 }
 
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homePageAccessButton {
+  margin-left: 1rem;
+  padding : 1rem;
+}
+
+.connexionAccessButton {
+  margin-right: 1rem;
+  padding: 1rem;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;

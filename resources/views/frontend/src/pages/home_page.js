@@ -26,8 +26,10 @@ export default function Home() {
             <main className={styles.main}>
                 <Card/>
             </main>
-            
-
         </>
     );
 }
+
+Home.getLayout = function getLayout(page) {
+    return <Layout>{page}</Layout>;
+};
