@@ -1,6 +1,7 @@
 import React from 'react';
 import '@/styles/globals.css';
-import { Footer, Header } from '@/layouts/layout';
+import { Footer} from '@/layouts/layout';
+import { Header } from '@/layouts/Header';
 
 export default function App({ Component, pageProps }) {
     return (
