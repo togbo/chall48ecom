@@ -23,9 +23,9 @@ use Illuminate\Support\Facades\Password;
 |
 */
 
-Route::get('/', function () {
+Route::get('/shop', function () {
     return view('welcome');
-});
+})->name('/');
 
 
 
@@ -116,3 +116,9 @@ Route::get('/products/{product}', 'ProductController@show')->name('products.show
 Route::get('/products/{product}/edit', 'ProductController@edit')->name('products.edit');
 Route::put('/products/{product}', 'ProductController@update')->name('products.update');
 Route::delete('/products/{product}', 'ProductController@destroy')->name('products.destroy');
+
+Route::middleware(RoleMiddleware::class . ':admin')->group(function () {
+    Route::get('/admin', function () {
+        return 'Admin Dashboard';
+    });
+});
