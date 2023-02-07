@@ -125,3 +125,10 @@
     height: 14vh;
 
 }
+
+
+.shopcard {
+    background-color: yellowgreen;
+    width: 10rem;
+    height: 4rem;
+}

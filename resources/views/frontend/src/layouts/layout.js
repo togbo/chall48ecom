@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import styles from "@/styles/home_page.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import ShopCard from '@/components/shopCard';
 
-export function Header() {
+export default function Layout({children}) {
     const [burgerActive, setBurgerActive] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
 
-    const [shopItems, setShopItems] = useState(false);
+    const [isShown, setIsShown] = useState(false);
 
     const handleBurgerClick = () => {
         setBurgerActive(!burgerActive);
@@ -14,58 +15,61 @@ export function Header() {
     };
 
     const handleShopClick = () => {
-        setShopItems(!shopItems);
+        setIsShown(!isShown);
     };
 
+    const [name, setName] = useState("test");
+    // const [shopCardArray, setShopCardArray] = useState([name]);
+    const shopCardArray = ["name"];
+
+    const addShopCard = async () => {
+        setShopCardArray([...shopCardArray, name]);
+    }
+
+
     return (
-        <header className={styles.header}>
-            <div className={`${styles.burger} ${burgerActive ? styles.active : ''}`} onClick={handleBurgerClick}>
-                <span />
-            </div>
-            {showPopup && (
-                <div className={styles.popupdiv}>
-                    <a href="#">Profil</a>
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+        <div>
+            <header className={styles.header}>
+                <div className={`${styles.burger} ${burgerActive ? styles.active : ''}`} onClick={handleBurgerClick}>
+                    <span />
                 </div>
-            )}
-
-            <input type="search" placeholder="Search" className={styles.search} />
-
-            <div className={styles.Logo}>
-                <h1>Logo</h1>
-            </div>
-
-            <div className={styles.shop}>
-                <button className={styles.shopbtn} onClick={handleShopClick} > Buy </button>
-                {shopItems && (
-                    <div className={styles.popupShop}>
-                        <h2>--,--€</h2>
-                        <div className={styles.shopItems}>
-                            <p>Name Item</p>
-                            <p>Price</p>
-                            <span>+</span>
-                            <span>-</span>
-                            <span className={styles.image}></span>
-                        </div>
+                {showPopup && (
+                    <div className={styles.popupdiv}>
+                        <a href="#">Profil</a>
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
                     </div>
                 )}
-            </div>
-        </header>
-    );
-}
 
-export function Footer() {
-    return (
-        <footer className={styles.footer}>
+                <input type="search" placeholder="Search" className={styles.search} />
+
+                <div className={styles.Logo}>
+                    <h1>Logo</h1>
+                </div>
+
+                <div className={styles.shop}>
+                <button className={styles.shopbtn} onClick={handleShopClick}> Product </button>
+                <div className={styles.popupShop}>
+                    { shopCardArray.map((item) => {
+                        {return isShown ? (                           
+                                <ShopCard name={item}/>
+                        ) : null;}
+                    })
+                    }
+                </div>
+                </div>
+            </header>
+            <main>{children}</main>
+            <footer className={styles.footer}>
             <div className={styles.footerContent}>
-                    <p>Instance : numero instance</p>
-                    <span>
-                        <h2>Logo</h2>
-                    </span>
-                    <h2>Nom commercant</h2>
+                <p>Instance : numero instance</p>
+                <span>
+                    <h2>Logo</h2>
+                </span>
+                <h2>Nom commercant</h2>
             </div>
         </footer>
+        </div>
     );
 }
