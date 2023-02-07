@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\InfoUserController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ResetController;
@@ -90,6 +91,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 
+
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/register', [RegisterController::class, 'create']);
     Route::post('/register', [RegisterController::class, 'store']);
@@ -105,3 +107,12 @@ Route::group(['middleware' => 'guest'], function () {
 Route::get('/login', function () {
     return view('session/login-session');
 })->name('login');
+
+//Route::resource('products', 'ProductController');
+Route::get('/products', 'ProductController@index')->name('products.index');
+Route::get('/products/create', 'ProductController@create')->name('products.create');
+Route::post('/products/stored', 'ProductController@stored')->name('products.stored');
+Route::get('/products/{product}', 'ProductController@show')->name('products.show');
+Route::get('/products/{product}/edit', 'ProductController@edit')->name('products.edit');
+Route::put('/products/{product}', 'ProductController@update')->name('products.update');
+Route::delete('/products/{product}', 'ProductController@destroy')->name('products.destroy');
