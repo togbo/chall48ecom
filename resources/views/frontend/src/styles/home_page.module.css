@@ -114,3 +114,14 @@
     border: 1px solid purple;
     transition: all 0.5s ease-in-out;
 }
+
+
+
+.footerContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 14vh;
+
+}
