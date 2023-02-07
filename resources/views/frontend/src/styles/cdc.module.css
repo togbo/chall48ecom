@@ -9,13 +9,15 @@
 }
 
 .text{
+    display: flex;
+    justify-content: center;
     color: #B8CBD0;
     margin-top: 5%;
 }
 
 .box{
     width: 400px;
-    height: 400px;
+    height: 600;
     background-color: #7A90A4;
     border-radius: 5px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
@@ -64,7 +66,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: grey;
+    background-color: #B8CBD0;
     padding: 2rem;
     cursor: pointer;
     margin: 10px;
@@ -83,7 +85,7 @@
 .connexionFormText{
     font-size: 1rem;
     font-weight: 700;
-    color: #000;
+    color: #B8CBD0;
     margin-top: 20px;
 }
 
