@@ -1,0 +1,201 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    max-width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.root{
+    --color-1: #54123B ;
+    --color-2: #84142D;
+    --color-3: #C02739;
+    --color-4: #29C7AC;
+}
+.cardwrapper{
+    position: relative;
+    min-height: 350px;
+    width: 15rem;
+    height: 5rem;
+    perspective: 700px;
+    perspective-origin: bottom;
+    margin: 3rem;
+}
+
+.cardwrapper:hover .card{
+    transform: rotateY(180deg);
+}
+
+.card{
+    position:relative;
+    height: 80%;
+    transform-style: preserve-3d;
+    transition: 0.8s cubic-bezier(0.62,0,0.55,1);
+}
+
+
+.cardfront, .cardback{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+
+.cardfront{
+    background: var(--color-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cardback{
+    background: var(--color-2);
+    transform: rotateY(180deg);
+    color: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cardback h1{
+    position: absolute;
+    top: 2rem;
+    color: rebeccapurple;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardback p{
+    position: absolute;
+    color: rebeccapurple;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.line2 {
+    width: 10rem;
+    height: 0.6rem;
+    margin-top: -4rem;
+    margin-bottom: 5rem;
+    border-radius: 55px;
+    background: #84142D;
+    box-shadow: inset 25px 25px 21px #660f23,
+            inset -25px -25px 21px #a21937;
+}
+
+.cardback a{
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    bottom: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border-radius: 51px;
+    background: linear-gradient(145deg, #8d1530, #771229);
+    box-shadow:  21px 21px 42px #620f21,
+                 -21px -21px 42px #a61939;  
+}
+
+.cardback a:focus{
+    border-radius: 51px;
+    background: linear-gradient(145deg, #771229, #8d1530);
+    box-shadow:  21px 21px 42px #620f21,
+                -21px -21px 42px #a61939;
+}
+
+.circle{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -4rem;
+    border-radius: 50%;
+    background: #84142D;
+    box-shadow: inset 24px 24px 48px #731127,
+                inset -24px -24px 48px #951733;
+}   
+
+
+
+.cardfront h2{
+    position: absolute;
+    top: 2rem;
+    color: rebeccapurple;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.line {
+    width: 10rem;
+    height: 0.6rem;
+    margin-bottom: 7rem;
+    border-radius: 55px;
+    background: #84142D;
+    box-shadow: inset 25px 25px 21px #660f23,
+            inset -25px -25px 21px #a21937;
+}
+
+.arrow{
+    margin-right: 1rem;
+    height: 0.1rem;
+    width: 1.5rem;
+    position: relative;
+    transition: all 0.2s;
+    background: var(--color-4);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.arrow::before, .arrow::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 0.1rem;
+    width: 0.6rem;
+    background: var(--color-4);
+}
+
+.arrow::before{
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+}
+
+.arrow::after{
+    transform: rotate(-45deg);
+    transform-origin: right top;
+}
+
+.cardfront:hover .arrow{
+    transition: all 0.2s;
+    margin-left: 0.5rem;
+    width: 5rem;
+}
+
+.Dicover {
+    position: absolute;
+    bottom:1rem;
+    color: white;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.2s;
+}

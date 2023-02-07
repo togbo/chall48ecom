@@ -81,6 +81,7 @@ export default function Layout({ children }) {
                     </div>
                 </header>
                 <main>{children}</main>
+                
                 <footer className={styles.footer}>
                     <div className={styles.footerContent}>
                         <p>Instance : numero instance</p>
