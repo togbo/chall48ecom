@@ -12,9 +12,9 @@
 }
 
 .root{
-    --color-1: #54123B ;
-    --color-2: #84142D;
-    --color-3: #C02739;
+    --color-1: #C49FFF ;
+    --color-2: #FFD0E6;
+    --color-3: #C49FFF;
     --color-4: #29C7AC;
 }
 .cardwrapper{
@@ -70,14 +70,14 @@
 .cardback h1{
     position: absolute;
     top: 2rem;
-    color: rebeccapurple;
+    color: #7D4FFE;
     font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .cardback p{
     position: absolute;
-    color: rebeccapurple;
+    color: white;
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 1rem;
@@ -90,9 +90,9 @@
     margin-top: -4rem;
     margin-bottom: 5rem;
     border-radius: 55px;
-    background: #84142D;
-    box-shadow: inset 25px 25px 21px #660f23,
-            inset -25px -25px 21px #a21937;
+    background: #C49FFF;
+    box-shadow: inset 25px 25px 21px #C49FFF,
+            inset -25px -25px 21px #C49FFF;
 }
 
 .cardback a{
@@ -104,16 +104,16 @@
     padding: 0.5rem 1rem;
     border-radius: 10px;
     border-radius: 51px;
-    background: linear-gradient(145deg, #8d1530, #771229);
-    box-shadow:  21px 21px 42px #620f21,
-                 -21px -21px 42px #a61939;  
+    background: linear-gradient(145deg, #C49FFF, #C49FFF);
+    box-shadow:  21px 21px 42px #C49FFF,
+                 -21px -21px 42px #C49FFF;  
 }
 
 .cardback a:focus{
     border-radius: 51px;
-    background: linear-gradient(145deg, #771229, #8d1530);
-    box-shadow:  21px 21px 42px #620f21,
-                -21px -21px 42px #a61939;
+    background: linear-gradient(145deg, #C49FFF, #C49FFF);
+    box-shadow:  21px 21px 42px #C49FFF,
+                -21px -21px 42px #C49FFF;
 }
 
 .circle{
@@ -125,9 +125,9 @@
     align-items: center;
     margin-top: -4rem;
     border-radius: 50%;
-    background: #84142D;
-    box-shadow: inset 24px 24px 48px #731127,
-                inset -24px -24px 48px #951733;
+    background: #C49FFF;
+    box-shadow: inset 24px 24px 48px #7D4FFE,
+                inset -24px -24px 48px #7D4FFE;
 }   
 
 
@@ -135,7 +135,7 @@
 .cardfront h2{
     position: absolute;
     top: 2rem;
-    color: rebeccapurple;
+    color: #7D4FFE;
     font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -145,9 +145,9 @@
     height: 0.6rem;
     margin-bottom: 7rem;
     border-radius: 55px;
-    background: #84142D;
-    box-shadow: inset 25px 25px 21px #660f23,
-            inset -25px -25px 21px #a21937;
+    background: #C49FFF;
+    box-shadow: inset 25px 25px 21px #C49FFF,
+            inset -25px -25px 21px #C49FFF;
 }
 
 .arrow{
