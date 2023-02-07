@@ -1,21 +1,9 @@
-
-
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6rem;
-    min-height: 100vh;
-    background-color: white;
-}
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 14vh;
+    height: 10vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -27,9 +15,9 @@
     width: 32px;
     height: 24px;
     cursor: pointer;
+    right: 2rem;
+    top: 2rem;
     z-index: 20;
-    margin-left: 4rem;
-    margin-top: 1rem;
 }
 
 .burger span {
@@ -79,38 +67,9 @@
     top: 0;
     left: 0;
     background-color: blue;
-    width: 10rem;
-    height: 100%;
+    width: 100%;
+    height: 10rem;
     z-index: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
 
-.search {
-    width: 20rem;
-    height: 2rem;
-}
 
-.shop {
-    width: 20rem;
-    height: 2rem;
-}
-
-.shopbtn {
-    width: 10rem;
-    height: 2rem;
-    background-color: purple;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    transition: all 0.5s ease-in-out;
-}
-
-.shopbtn:hover {
-    background-color: white;
-    color: purple;
-    border: 1px solid purple;
-    transition: all 0.5s ease-in-out;
 }
