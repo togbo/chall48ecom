@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import React from 'react';
 import styles from "@/styles/home_page.module.css";
+import { Header } from '@/layouts/layout';
+import { Footer } from '@/layouts/layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Layout } from '@/layouts/layout';
 
@@ -27,6 +29,7 @@ export default function Home() {
             <Header></Header>
             <main className={styles.main}>
             </main>
+            {/* <Footer></Footer> */}
         </>
     );
 }
