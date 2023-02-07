@@ -1,3 +1,7 @@
+.container {
+  background-color: rgb(255, 196, 196);
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -5,6 +9,7 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  background-color: aliceblue;
 }
 
 .home {

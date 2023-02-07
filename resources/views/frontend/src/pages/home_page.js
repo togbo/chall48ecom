@@ -2,8 +2,7 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import React from "react";
 import styles from "@/styles/home_page.module.css";
-import Layout from "@/layouts/layout";
-
+import Card from "@/components/Card";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -24,6 +23,9 @@ export default function Home() {
                     referrerpolicy="no-referrer"
                 />
             </Head>
+            <main className={styles.main}>
+                <Card/>
+            </main>
         </>
     );
 }
