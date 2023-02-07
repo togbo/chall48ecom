@@ -3,6 +3,7 @@ import { Inter } from "@next/font/google";
 import React from "react";
 import styles from "@/styles/home_page.module.css";
 import Card from "@/components/Card";
+import Layout from "@/layouts/layout";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
                 />
             </Head>
             <main className={styles.main}>
-                <Card/>
+                <Card />
             </main>
         </>
     );
