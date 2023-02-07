@@ -21,14 +21,24 @@ class SessionsController extends Controller
         ]);
 
         if(Auth::attempt($attributes))
-        {
+        {/**to do gestion utilisateur */
+            if (Auth::check() && Auth::user()->role_id) {
+            // L'utilisateur est un administrateur 
+            return redirect()->route('dashboard');}else{
+          
+            return redirect()->route('/');
+
             session()->regenerate();
-            return redirect('dashboard')->with(['success'=>'You are logged in.']);
+            return redirect('/')->with(['success'=>'You are logged in.']);
         }
-        else{
+        
+        // L'utilisateur n'est pas un administrateur
+        
+        }
+        
 
             return back()->withErrors(['email'=>'Email or password invalid.']);
-        }
+        
     }
     
     public function destroy()

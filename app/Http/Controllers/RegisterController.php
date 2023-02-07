@@ -29,6 +29,15 @@ class RegisterController extends Controller
         session()->flash('success', 'Your account has been created.');
         $user = User::create($attributes);
         Auth::login($user); 
-        return redirect('/dashboard');
+        if (Auth::check() && Auth::user()->role_id) {
+            // L'utilisateur est un administrateur
+            return redirect()->route('dashboard');
+        }
+        else{
+            return redirect()->route('/');
+        }
+        // L'utilisateur n'est pas un administrateur
+        
+       // return redirect('/dashboard');
     }
 }

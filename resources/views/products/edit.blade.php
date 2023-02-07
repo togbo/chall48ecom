@@ -1,8 +1,18 @@
-
+<script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/fullcalendar.min.js"></script>
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
 @extends('layouts.user_type.auth')
 @section('content')
 
 
+<div class="container-fluid py-4">
+    <div class="row">
 <form action="{{ route('products.update', $product->id) }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
