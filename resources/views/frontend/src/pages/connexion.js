@@ -44,8 +44,6 @@ export default function Connexion() {
                             <input className={style.connexionFormInput} type="email" name="email" id="email" placeholder="Email"/>
                             <input className={style.connexionFormInput} type="password" name="password" id="password" placeholder="Mot de passe"/>
                             <button className={style.connexionFormButton} type="submit">Se connecter</button>
-                            <input className={style.connexionFormCheckbox} type="checkbox" name="remember" id="remember"/>
-                            <label className={style.connexionFormLabel} for="remember">Se souvenir de moi</label>
                         <p className={style.connexionFormText}>Vous n'avez pas de compte ? <a className={style.connexionFormLink} href="/creationdecompte">Inscrivez-vous</a></p>
                     </div>
                         </form>
