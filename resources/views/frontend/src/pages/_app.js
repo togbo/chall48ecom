@@ -1,14 +1,13 @@
 import React from 'react';
 import '@/styles/globals.css';
-import { Footer} from '@/layouts/layout';
-import { Header } from '@/layouts/Header';
+import Layout from '@/layouts/layout';
 
 export default function App({ Component, pageProps }) {
     return (
         <>
-            <Header />
+            <Layout>
             <Component {...pageProps} />
-            <Footer />
+            </Layout>
         </>
     );
 }
