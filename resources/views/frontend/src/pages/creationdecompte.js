@@ -18,8 +18,13 @@ export default function Home() {
         let page1 = document.getElementById("page1");
     let page2 = document.getElementById("page2");
     let page3 = document.getElementById("page3");
+    let wrongPassword = document.getElementById("wrongPassword");
+    let wrongPassword2 = document.getElementById("wrongPassword2");
     page2.style.display = "none";
     page3.style.display = "none";
+    wrongPassword.style.display = "none";
+    wrongPassword2.style.display = "none";
+
     }
 
     function commercant() {
@@ -36,6 +41,29 @@ export default function Home() {
         page2.style.display = "none";
         page3.style.display = "none";
     }
+
+    function Submit() {
+        wrongPassword.style.display = "none"
+        /*Check the password was the same*/ 
+        let password = document.getElementById("psw1").value;
+        let password2 = document.getElementById("psw2").value;
+        //check if all the fields are filled and if the password is the same
+        if (password == null || password == "" || password2 == null || password2 == "") {
+            console.log("Veuillez remplir tous les champs");
+        }else if (password == password2){
+            alert("Compte créé avec succès");
+            window.location.href = "/connexion";
+        }else if(password != password2){
+            wrongPassword.style.display = "block";
+            wrongPassword2.style.display = "block";
+        }else{
+            console.log("error");
+        }
+
+    }
+
+
+ 
 
     
         
@@ -67,25 +95,33 @@ export default function Home() {
                 </div>
                 <div className={style.box} id="page2">
                     <h1 className={style.text}>Commercant</h1>
-                    <div className={style.Register}>
-                    <input type="text" placeholder="Nom D'utilisateur" className={style.inputs}/>
-                    <input type="text" placeholder="Email" className={style.inputs}/>
-                        <input type="password" placeholder="Password" className={style.inputs}/>
-                        <input type="password" placeholder="Confirm Password" className={style.inputs}/>
-                        <button type="submit" className={style.button} >Suivant</button>
+                    <form onsubmit="return false">
+                        <div className={style.Register}>
+                        
+                    <input type="text" placeholder="Nom D'utilisateur" className={style.inputs }required="required"/>
+                    <input type="email" placeholder="Email" className={style.inputs} required="required"/>
+                        <input type="password" placeholder="Password" id="psw1" className={style.inputs} required="required"/>
+                        <input type="password" placeholder="Confirm Password" id="psw2" className={style.inputs} required="required"/>
+                        <p className={style.checkPassword} id="wrongPassword">Wrong password</p> 
+                        <button type="submit" className={style.button} onClick={Submit} >Suivant</button>
                         <button type="button" className={style.button} onClick={Retour}>Retour</button>
                     </div>
+                    </form>
                 </div>
                 <div className={style.box} id="page3">
                     <h1 className={style.text}>Client</h1>
-                    <div className={style.Register}>
-                    <input type="text" placeholder="Nom D'utilisateur" className={style.inputs}/>
-                        <input type="text" placeholder="Email" className={style.inputs}/>
-                        <input type="password" placeholder="Password" className={style.inputs}/>
-                        <input type="password" placeholder="Confirm Password" className={style.inputs}/>
-                        <button type="submit" className={style.button} >Suivant</button>
+                    <form onsubmit="return false">
+                        <div className={style.Register}>
+                        
+                    <input type="text" placeholder="Nom D'utilisateur" className={style.inputs }required="required"/>
+                    <input type="email" placeholder="Email" className={style.inputs} required="required"/>
+                        <input type="password" placeholder="Password" id="psw1" className={style.inputs} required="required"/>
+                        <input type="password" placeholder="Confirm Password" id="psw2" className={style.inputs} required="required"/>
+                        <p className={style.checkPassword} id="wrongPassword2">Wrong password</p>
+                        <button type="submit" className={style.button} onClick={Submit} >Suivant</button>
                         <button type="button" className={style.button} onClick={Retour}>Retour</button>
                     </div>
+                    </form>
                 </div>
             </main>
         </>
