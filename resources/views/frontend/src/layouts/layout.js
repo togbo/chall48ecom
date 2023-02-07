@@ -3,9 +3,8 @@ import { Footer } from "./Footer";
 
 
 const Layout = ({children}) => {
-    if (children.type.name === 'Connexion' || children.type.name === 'createAccount' ) {
+    if (children.type.name === 'Connexion' || children.type.name === 'createAccount'|| children.type.name ==='createAccountCommercent' ) {
     
-
     return ( 
         <div className="content">
             {children}

@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import react from "react";
 import { Inter } from "@next/font/google";
-import style from "@/styles/cdc.module.css";
+import style from "@/styles/createAccount.module.css";
 
 
 
