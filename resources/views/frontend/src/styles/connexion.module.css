@@ -15,9 +15,9 @@
 }
 
 .connexionBox{
+    background-image: linear-gradient(45deg, #ffffc5,#fff);
     width: 400px;
     height: 400px;
-    background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
     display: flex;
@@ -58,7 +58,7 @@
     border: none;
     border-radius: 5px;
     background-color: #000;
-    color: #fff;
+    color: #ffffff;
     font-size: 1.2rem;
     font-weight: 700;
     margin-left: 5px;
@@ -74,8 +74,9 @@
 .connexionFormText{
     font-size: 1rem;
     font-weight: 700;
-    color: #000;
+    color: #ff5353;
     margin-top: 20px;
+    
 }
 
 .connexionFormLink{
