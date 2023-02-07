@@ -61,9 +61,14 @@
     color: #fff;
     font-size: 1.2rem;
     font-weight: 700;
-margin-left: 5px;
-margin-top: 10px;
+    margin-left: 5px;
+    margin-top: 10px;
     cursor: pointer;
+}
+
+.connexionFormButton:hover{
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
 }
 
 .connexionFormText{
