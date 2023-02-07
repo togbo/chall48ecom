@@ -1,19 +1,25 @@
-## Mise en contexte
+# Mise en contexte
 
 Dans ce projet, nous allons mettre en place un réseau de petits commerçants qui peut être déployé de manière décentralisée et qui permet aux clients finaux de trouver et d'acheter des produits proposés par plusieurs commerçants via une seule instance. Nous avons developpé un site web pour simmulé les differentes interactions possible, et avons theorisé un protocole de communication securisé entre les differents commerçants, les clients et le site web.
 
-## choix des technologie  
+# choix des technologie  
+## Framework PHP Laravel
+Laravel est un framework PHP populaire qui fournit un environnement de développement web moderne et flexible. Il facilite la création de sites web dynamiques et peut être utilisé pour développer une boutique en ligne décentralisée.
 
-Pour nos test en local nous avons utilisé XAMPP, pour la gestion de la base de donnée nous avons utilisé mysql sur phpmyadmin. Nous avons utilisé le FrameWork Laravel pour la partie back-end et le framework Bootstrap pour la partie front-end. Cependant, nous avons egalement songé a utiliser docker pour simulé un environnement de test, mais aussi React et next.js pour la partie front-end.
+## Blockchain Ethereum
+Ethereum est une plateforme de blockchain publique qui permet la création et l'exécution de contrats intelligents. Cela peut être utilisé pour développer une boutique en ligne décentralisée où les transactions sont enregistrées sur une blockchain publique pour garantir la transparence et l'immuabilité des données.
 
-## Modèle de communication entre les instances
-Le modèle de communication entre les instances du système doit être robuste et sécurisé pour garantir la confidentialité et l'intégrité des données transmises. Il peut y avoir plusieurs approches pour mettre en place ce modèle de communication, telles que l'utilisation de protocoles de communication sécurisés comme HTTPS, ou l'utilisation de réseaux privés virtuels (VPN).
+## IPFS (InterPlanetary File System)
+IPFS est un système de fichiers décentralisé qui peut être utilisé pour stocker et distribuer des données sur le réseau. Il peut être utilisé pour stocker les images et les informations produits sur la boutique en ligne décentralisée.
 
-Cependant, pour un déploiement local de plusieurs instances,pour des test, nous avons pensé a utiliser une approche basée sur des API REST (Representational State Transfer) pour permettre la communication entre les instances. Chaque instance peut publier une API qui décrit les produits qu'elle propose, et les autres instances peuvent appeler cette API pour récupérer ces informations.
+## Web3.js
+Web3.js est une bibliothèque JavaScript qui facilite la communication entre une application web et une blockchain Ethereum. Cela peut être utilisé pour interagir avec la blockchain Ethereum et les contrats intelligents développés pour la boutique en ligne décentralisée.
 
-Pour ce qui est des serveur, plusieurs instances de serveur peuvent être déployées pour héberger les produits de différents commerçants. Chaque instance peut être implémentée en utilisant Apache par exemple, et peut être configurée pour exposer une API REST pour récupérer les informations sur les produits qu'elle propose. Les clients peuvent appeler cette API pour récupérer les informations sur les produits proposés par les différents commerçants.
 
-Chaque instance peut utiliser une base de données pour stocker les informations sur les produits proposés par les commerçants, ainsi que les informations sur les autres instances connues, ce qui peut etre mis en place avec la technologie MySQL par exemple.
+# Modèle de communication entre les instances
+## Le protocole SSL/TLS
+Le protocole SSL/TLS est utilisé pour assurer la sécurité de la communication entre les serveurs en chiffrant les données transmises. Il garantit également l'intégrité des données en vérifiant l'authenticité de l'identité de l'autre partie et en utilisant un algorithme de hash pour détecter toute modification apportée aux données durant le transit.
+L'utilisation du protocole SSL/TLS permet d'assurer la confidentialité, l'intégrité et l'authenticité des données transmises entre les instances, ce qui est crucial pour une boutique décentralisée.
 
 ## Sécurité réseau
 
