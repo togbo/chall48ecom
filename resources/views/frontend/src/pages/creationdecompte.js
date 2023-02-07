@@ -63,6 +63,7 @@ export default function Home() {
                         <button type="button" className={style.button} onClick={commercant}>Commerçant</button>
                         <button type="button" className={style.button}onClick={client}>Client</button>
                     </div>
+                    <p className={style.connexionFormText}>Vous avez déja un compte ? <a className={style.connexionFormLink} href="/connexion">Connexion</a></p>
                 </div>
                 <div className={style.box} id="page2">
                     <h1 className={style.text}>Commercant</h1>
