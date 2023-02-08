@@ -56,6 +56,8 @@ En somme, la décentralisation d'un site e-commerce(boutique décentratralisée)
 # Stockage de données
 Pour résoudre ce problème, nous pouvons utiliser une approche de stockage décentralisé telle que IPFS ou blockchain. Cela permettra de stocker les données de manière distribuée et décentralisée, rendant le système plus sécurisé et résilient.
 
+# Déploiement
+En se basant sur le principe du DevSecOps qui implique de faire de la sécurité une partie intégrante de chaque étape du cycle de développement logiciel, depuis la planification jusqu'à la mise en production. Nous pouvons effectuer des tests de sécurité automatisés, déployer des mises à jour de sécurité rapidement et facilement et implémenter des contrôles de sécurité de bout en bout pour garantir que votre système reste sécurisé à tout moment.
 
 # conclusion
 
