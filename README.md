@@ -2,7 +2,7 @@
 
 Dans ce projet, nous allons mettre en place un réseau de petits commerçants qui peut être déployé de manière décentralisée et qui permet aux clients finaux de trouver et d'acheter des produits proposés par plusieurs commerçants via une seule instance. Nous avons developpé un site web pour simmulé les differentes interactions possible, et avons theorisé un protocole de communication securisé entre les differents commerçants, les clients et le site web.
 
-# choix des technologie  
+# Choix des technologies  
 ## Framework PHP Laravel
 Laravel est un framework PHP populaire qui fournit un environnement de développement web moderne et flexible. Il facilite la création de sites web dynamiques et peut être utilisé pour développer une boutique en ligne décentralisée.
 
