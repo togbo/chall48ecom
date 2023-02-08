@@ -41,10 +41,11 @@ Surveillance régulièrement le réseau pour détecter tout comportement anormal
 
 ## Politique de sécurité 
 Définition d'une politique de sécurité claire pour le personnel technique et les utilisateurs qui travaillent sur le réseau pour garantir une utilisation responsable et sécurisée.
-
+## La sécurité physique du réseau
+ La sécurité physique des serveurs est un aspect important de la sécurité de l'infrastructure d'un système informatique. Elle comprend des mesures telles que la restriction de l'accès physique aux serveurs, la surveillance en temps réel, la protection contre les incendies et les inondations, ainsi que le suivi et la maintenance des systèmes de refroidissement pour éviter la surchauffe. Les détais de la sécurité physique des serveurs dépendent de la taille et de la complexité de votre infrastructure informatique et doivent être planifiés et mis en œuvre en conséquence.
 # Decentralisation
 
-La décentralisation que voulons mettre en place sur système  signifie que les données et les transactions ne sont pas gérées par une seule entité centralisée, mais sont plutôt réparties sur un réseau de nœuds décentralisés. Cela permet de garantir une meilleure disponibilité et une plus grande résilience du système, car les données ne sont pas concentrées en un seul point vulnérable.
+Le systeme de décentralisation que voulons mettre en place  signifie que les données et les transactions ne sont pas gérées par une seule entité centralisée, mais sont plutôt réparties sur un réseau de nœuds décentralisés. Cela permet de garantir une meilleure disponibilité et une plus grande résilience du système, car les données ne sont pas concentrées en un seul point vulnérable.
 
 Pour garantir la scalabilité du système, les nœuds de stockage et de calcul sont conçus pour gérer de grandes quantités de données et de trafic sans compromettre les performances. Les API décentralisées permettent aux utilisateurs de communiquer avec les nœuds pour accéder aux données et effectuer des transactions.
 
