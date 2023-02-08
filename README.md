@@ -21,7 +21,30 @@ Web3.js est une bibliothèque JavaScript qui facilite la communication entre une
 Le protocole SSL/TLS est utilisé pour assurer la sécurité de la communication entre les serveurs en chiffrant les données transmises. Il garantit également l'intégrité des données en vérifiant l'authenticité de l'identité de l'autre partie et en utilisant un algorithme de hash pour détecter toute modification apportée aux données durant le transit.
 L'utilisation du protocole SSL/TLS permet d'assurer la confidentialité, l'intégrité et l'authenticité des données transmises entre les instances, ce qui est crucial pour une boutique décentralisée.
 
-## Sécurité réseau
+# Sécurité réseau
+Pour assurer la sécurité du réseau du projet nous avons appliqué  les mesures suivantes :
+
+## Chiffrement des données
+ le protocole SSL/TLS pour chiffrer les communications sur le réseau et protéger les informations sensibles telles que les informations de paiement et les informations de compte.
+
+## Authentification forte
+ inpmlémentation d'une authentification forte pour les utilisateurs et les instances en utilisant des méthodes notamment l'authentification à deux facteurs .
+
+## Mises à jour de sécurité régulières 
+L'installation régulièrement des mises à jour de sécurité pour tous les logiciels utilisés sur le réseau, y compris les systèmes d'exploitation, les bases de données, les frameworks web et les bibliothèques de développement.
+
+## Sauvegarde de données 
+Création  des sauvegardes régulières de toutes les données importantes pour éviter les pertes de données en cas d'incident sur le réseau.
+
+## Surveillance du réseau 
+Surveillance régulièrement le réseau pour détecter tout comportement anormal et réagirais rapidement pour éviter les attaques.
+
+## Politique de sécurité 
+Définition d'une politique de sécurité claire pour le personnel technique et les utilisateurs qui travaillent sur le réseau pour garantir une utilisation responsable et sécurisée.
+
+
+
+
 
 Pour garantir la sécurité du système, nous avons pris en compte les menaces potentielles telles que les attaques DoS, MitM, et d'injection de code. Pour les prévenir, nous utiliserons des techniques telles qu'un pare-feu, HTTPS, et des stratégies de détection et de réponse à une intrusion.
 
